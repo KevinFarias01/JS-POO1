@@ -9,8 +9,13 @@ diretor.cadastrarSenha("123456");
 const gerente = new Gerente("Ricardo", 5000, 12345678999);
 gerente.cadastrarSenha("123");
 
+const cliente = new Cliente("Camila", 7899874554, "456");
+
 const diretorEstaLogado = SistemaAutenticacao.login(diretor, "123456");
 const gerenteEstaLogado = SistemaAutenticacao.login(gerente, "123");
 
+const clienteEstaLogado = SistemaAutenticacao.login(cliente, "456");
+
 console.log(gerenteEstaLogado);
 console.log(diretorEstaLogado);
+console.log(clienteEstaLogado);
